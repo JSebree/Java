@@ -1,0 +1,349 @@
+Hi Everyone!
+
+The following is your final exam. I am posting as a text file so that
+everyone will have an easily editable file to work with.
+
+Please return this file as an attachment with the answers added
+after each question! Keep a copy in case of any WebCT problems.
+
+You can use any resources you want (as long as you're the one doing
+the work and the exam :-) The answers to the questions should be in
+your own words and not just copies of textbook or class note material.
+
+Lance
+
+--------------------------------------------------------------------
+UMass CyberEd 90.297 - Introduction to Java Programming
+Final Exam
+
+Name: < ___Jerick Sebree_________________ >
+
+Give reasonably brief, but complete answers to the following.
+
+The follow questions are 4 points each.
+
+--------------------------------------------------------------------
+1.  How does Java support the concept of encapsulation?
+
+Encapsulation in Java is supported by declaring variables of classes
+ as private so that only methods of that class can act upon them. They
+ are wrapped, and hidden from other classes.
+--------------------------------------------------------------------
+2.  Describe the difference between an object and a class.
+
+A class defines an object and its behavior. It is a broader concept
+generally than an object. Objects are instances of the defined class.
+Using the parameters of the class, you can define properties of the
+object.
+--------------------------------------------------------------------
+3.  What is the difference between the contents of a Java variable
+    of a primitive type and a Java variable of a class type?
+
+Variables of primitive types are stored in the memory location of that
+variable. The range of memory allocated for primitive types is fixed, while
+the memory allocation for the class type may vary drastically in size. They
+stored in the variable loaction, but rather a separate piece of memory.
+The location (or reference) of that memory is what is stored as the
+variable.
+--------------------------------------------------------------------
+4.  (a) How is a 'static' class method different from a regular
+    (non-static) class method?
+
+Static methods belong to the class, and therefore does not require
+an object to call the method. While non-static methods belong to and require
+objects of that class to call the method.
+
+    (b) How is a 'static' variable in a class different from a
+    regular (instance) variable in a class?
+
+A static variable is a class variable while non-static variables are instant
+variables. This means that static variables are applied to all instances of
+a class while non-static variables depend on the creation of an object and
+are only applied to that instance.
+--------------------------------------------------------------------
+5.  What does the Java keyword 'this' refer to?
+
+'this' refers to the current object that is being invoked by a method
+or constructor. It is usually omitted during the construction of methods
+and constructors, as Java allows it's omission in many cases.
+--------------------------------------------------------------------
+6.  What does the Java 'new' operator do?
+
+It is used to create a new object of a class.
+--------------------------------------------------------------------
+7.  When does a class require an 'equals' method to be written?
+
+Typically, you use the equals method to compare if two string value are equal.
+--------------------------------------------------------------------
+8.  What is method "overriding"?  Why would you override a method?
+
+Method overriding is when a method of a subclass overrides the method
+of it's parent class with a different implementation of the method. You
+would use this to differentiate specific definitions of method from the
+super class. The example of it's use is evident in our Shape class method
+overridden by the method Circle class.
+--------------------------------------------------------------------
+9.  What advantages does inheritance provide in Java?
+
+Inheritance makes it so that subclasses inherit characteristics and
+definitions of the parent class. It is useful because it saves the programmer
+time, memory, and space by not duplicating code from the parent class.
+--------------------------------------------------------------------
+10. What is dynamic binding? What advantage does it provide?
+
+Dynamic binding means "late binding" which means that binding (or
+pairing of object and its method) is done at runtime, rather than during
+compiling. It is useful when objects of a subclass invokes a method
+that overrides a method from the parent class.
+--------------------------------------------------------------------
+11. How is it possible for two String objects with identical values
+    not to be equal when compared with the == operator?
+
+"==" tests to see whether the values are pointing to the same location
+while the equals method compare the values themselves. This is why it is
+necessary to use equals method on strings and objects.
+--------------------------------------------------------------------
+12. Why can a class variable of a base type be set to reference an
+    object of a derived type, eg:
+
+    Shape s = new Circle("Blue", 1.0);
+
+By it’s hierarchical nature, the derived type is of the base type. In the above example, the new circle implies a new shape (circle is a shape). The hierarchy structure of the base class and it's subclasses allows defining subclasses and it's methods. Therefore new Circle can be reference by the base class variable 's'.
+--------------------------------------------------------------------
+13. How can the methods of a derived class access private instance
+    variables of its base class?
+
+It inherits the public instances and may use the base class's methods
+to access private instances of the base class. It does not inherit private
+instances in the same manner as public instances.
+--------------------------------------------------------------------
+14. The following try/catch has code to explicitly handle any
+    IllegalArgumentException thrown. Show the modified code that
+    will also catch any other type of exception that could be thrown
+    by code called within the try block.
+
+    try
+    {
+      ... methods called here ...
+      ...
+    }
+    catch (IllegalArgumentException e)
+    {
+      ... code to handle IllegalArgumentException ...
+    }
+
+try
+    {
+      ... methods called here ...
+      ...
+    }
+    catch (Exception e)
+    {
+      ... code to handle Exception ...
+    }
+--------------------------------------------------------------------
+15. How is the caller's flow of control (sequence of statement
+    execution) different when an exception is thrown from a method
+    that it calls, vs. when the method returns normally?
+
+If a method inside the try block throws and exception, the subsequent
+ methods within the block do not execute, vs all methods execute if
+ the method returns normally.
+-------------------------------------------------------------------
+
+
+The following questions are 20 points each. Paste your source code
+below each question, and example input and output. Do not include
+the code required to test the methods, etc.
+
+--------------------------------------------------------------------
+P1. Write a static method that checks if a String represents a valid
+    integer value and returns true if valid, or false if not.  For
+    example, "123", "-45", and "0" are valid integers, but "x7" and
+    "3.14" are not. Use java.lang.Integer.parseInt() to perform the
+    actual validity checking inside your method. Your method should
+    also return false if the parameter String is null or empty.
+    It should NOT throw any exceptions back to the caller (but may
+    use exceptions internally).
+
+    Use the following prototype for your method:
+
+      public static boolean isValidInt(String testIntval)
+
+    Show example output for the following values entered:
+    "42"
+    "-123"
+    "12-34"
+    "10.5"
+    "x7"
+    ""  (length 0 string)
+    null (pass a Java null reference in a hardcoded call to isValidInt)
+
+
+Source Code:
+import java.util.Scanner;
+import java.lang.*;
+
+public class P1 {
+    public static void main (String[] args)
+    {
+        Scanner intValue = new Scanner(System.in);
+        do {
+            System.out.println("Enter a value to see if it is an integer...");
+            String testIntval = intValue.nextLine();
+            isValidInt(testIntval);
+        }while (true);
+    }
+    public static boolean isValidInt(String testIntval) {
+        try{
+            Integer.parseInt(testIntval);
+            System.out.print(true);
+            System.out.println();
+        }
+        catch(NumberFormatException e){
+            System.out.print(false);
+            System.out.println();
+        }
+        return true;
+    }
+}
+
+
+Runtime Output:
+Enter a value to see if it is an integer...
+42
+true
+Enter a value to see if it is an integer...
+-123
+true
+Enter a value to see if it is an integer...
+12-34
+false
+Enter a value to see if it is an integer...
+10.5
+false
+Enter a value to see if it is an integer...
+x7
+false
+Enter a value to see if it is an integer...
+
+false
+Enter a value to see if it is an integer...
+""
+false
+Enter a value to see if it is an integer...
+" "
+false
+Enter a value to see if it is an integer...
+
+false
+Enter a value to see if it is an integer...
+null
+false
+Enter a value to see if it is an integer...
+
+
+--------------------------------------------------------------------
+P2. Write a Java method that returns the largest value passed to it.
+    Use the following prototype:
+
+    public static int max(int val1, int val2, int val3) {
+      // return the largest of the three values...
+    }
+
+    For example, the following call of your method sets 'n' to 30:
+
+    int n = max(20, 30, 10);
+
+    Note that any three values can be passed to this method.
+    The following would also set 'n' to 30:
+
+    int n = max(30, 30, 10);
+
+    Write a main() method to test your max method.  It should input
+    three values, call your max method, and then print the three
+    values and returned max value as output, eg:
+
+    Input values: 30 20 10  - max value is 30
+
+    The max() method cannot read any input values, nor print any
+    output values.  All input and printing is done by the main()
+    method that calls max().
+
+    Paste in both your source code for your max() method, and
+    the runtime output showing the parameter values and returned
+    maximum value for the following sample input values:
+
+    a) 30, 30, 30
+    b) 10, -10, 20
+    c) 40, 60, 50
+    d) 90, 70, 80
+    e) 50, 50, 25
+    f) 50, 50, 75
+    g) 200, 100, 200
+    h) 200, 400, 200
+    i) 300, 500, 500
+    j) 700, 500, 500
+
+
+Source Code:
+import java.util.Scanner;
+
+public class P2 {
+    public static void main (String[] args)
+    {
+        Scanner intValue = new Scanner(System.in);
+        do {
+            System.out.println("Enter three values...");
+            int val1 = intValue.nextInt();
+            int val2 = intValue.nextInt();
+            int val3 = intValue.nextInt();
+            System.out.println("max value is " + max(val1, val2, val3));
+        }while (true);
+    }
+    public static int max(int val1, int val2, int val3) {
+        int maxVal = val1;
+        if (val2 > maxVal)
+            maxVal = val2;
+        if (val3 > maxVal)
+            maxVal = val3;
+        return maxVal;
+    }
+}
+
+
+Runtime Output:
+Enter three values...
+30 30 30
+max value is 30
+Enter three values...
+10 -10 20
+max value is 20
+Enter three values...
+40 60 50
+max value is 60
+Enter three values...
+90 70 80
+max value is 90
+Enter three values...
+50 50 25
+max value is 50
+Enter three values...
+50 50 75
+max value is 75
+Enter three values...
+200 100 200
+max value is 200
+Enter three values...
+200 400 200
+max value is 400
+Enter three values...
+300 500 500
+max value is 500
+Enter three values...
+700 500 500
+max value is 700
+Enter three values...
+
+
+--------------------------------------------------------------------

@@ -1,0 +1,85 @@
+Last login: Sun May 28 21:10:53 on ttys000
+Mavericks:~ Mavericks$ cd desktop
+Mavericks:desktop Mavericks$ cd dropbox
+Mavericks:dropbox Mavericks$ cd sites
+Mavericks:sites Mavericks$ cd uml
+Mavericks:uml Mavericks$ cd java
+Mavericks:java Mavericks$ javac Assignment1.java
+Mavericks:java Mavericks$ java Assignment1
+Enter a line of text containing the word 'java' somewhere within it.
+I'm learning java at UMass this semester!
+I'm learning java at UMass this semester!
+41
+i'm learning java at umass this semester!
+I'M LEARNING JAVA AT UMASS THIS SEMESTER!
+13
+I'm learning Java at UMass this semester!
+I'm learning JAVA at UMass this semester!
+
+Done - press enter key to end program
+
+Mavericks:java Mavericks$ java Assignment1
+Enter a line of text containing the word 'java' somewhere within it.
+Using java is fun!
+Using java is fun!
+18
+using java is fun!
+USING JAVA IS FUN!
+6
+Using Java is fun!
+Using JAVA is fun!
+
+Done - press enter key to end program
+
+Mavericks:java Mavericks$ java Assignment1
+Enter a line of text containing the word 'java' somewhere within it.
+java is cool!
+java is cool!
+13
+java is cool!
+JAVA IS COOL!
+0
+Java is cool!
+JAVA is cool!
+
+Done - press enter key to end program
+
+Mavericks:java Mavericks$ java Assignment1
+Enter a line of text containing the word 'java' somewhere within it.
+Try just using java
+Try just using java
+19
+try just using java
+TRY JUST USING JAVA
+15
+Try just using Java
+Try just using JAVA
+
+Done - press enter key to end program
+
+Mavericks:java Mavericks$ java Assignment1
+Enter a line of text containing the word 'java' somewhere within it.
+Yes, java rules!
+Yes, java rules!
+16
+yes, java rules!
+YES, JAVA RULES!
+5
+Yes, Java rules!
+Yes, JAVA rules!
+
+Done - press enter key to end program
+
+Mavericks:java Mavericks$ java Assignment1
+Enter a line of text containing the word 'java' somewhere within it.
+When I say java, I do not mean coffee beans, but rather a language that propells our civilization into a information revolution!
+When I say java, I do not meean coffee beans, but rather a language that propells our civilization into a information revolution!
+129
+when i say java, i do not meean coffee beans, but rather a language that propells our civilization into a information revolution!
+WHEN I SAY JAVA, I DO NOT MEEAN COFFEE BEANS, BUT RATHER A LANGUAGE THAT PROPELLS OUR CIVILIZATION INTO A INFORMATION REVOLUTION!
+11
+When I say Java, I do not meean coffee beans, but rather a language that propells our civilization into a information revolution!
+When I say JAVA, I do not meean coffee beans, but rather a language that propells our civilization into a information revolution!
+
+Done - press enter key to end program
+

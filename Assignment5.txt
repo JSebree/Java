@@ -1,0 +1,52 @@
+Mavericks:java Mavericks$ javac ArraySort.java
+Mavericks:java Mavericks$ java ArraySort
+
+How many integers are in your array (between 3 and 10)?
+10
+Enter 10 values.
+Eneter array value 1
+1000
+Eneter array value 2
+-200
+Eneter array value 3
+500
+Eneter array value 4
+150
+Eneter array value 5
+600
+Eneter array value 6
+800
+Eneter array value 7
+150
+Eneter array value 8
+50
+Eneter array value 9
+-25
+Eneter array value 10
+987264
+
+Unsorted array:
+1000
+-200
+500
+150
+600
+800
+150
+50
+-25
+987264
+
+Sorted array:
+-200
+-25
+50
+150
+150
+500
+600
+800
+1000
+987264
+
+Done - press enter key to end program
